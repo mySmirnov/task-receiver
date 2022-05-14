@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  postgresql:
+    restart: always
+    image: 'postgres:latest'
+    container_name: tasks_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=tasks
+    ports:
+      - '5433:5432'
